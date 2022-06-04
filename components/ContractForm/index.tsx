@@ -16,17 +16,7 @@ const ContractForm = () => {
                 type="text"
                 name="name"
             />
-            <form>
-            <label>
-               Input contract addres
-                    
-            </label>
-                <Input
-                    type="submit"
-                    value="Submit"
-                    onClick={getContract}
-                />
-            </form>
+           
         </>
     )
    
