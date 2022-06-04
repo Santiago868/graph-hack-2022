@@ -8,11 +8,13 @@ import {
   Code,
   Grid,
   theme,
+  Button
 } from "@chakra-ui/react"
 
 
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
+import { FaRegMap } from "react-icons/fa"
 
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
