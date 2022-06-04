@@ -1,14 +1,13 @@
 import { Heading } from '@chakra-ui/react'
 
-const Results = () => {
+const Home = () => {
     return (
         <div>
             <div>
                 <Heading>
-                    INSERT TAGLINE
+                   HOME
                 </Heading>
             </div>
-           
             
             <div>
 
@@ -18,4 +17,4 @@ const Results = () => {
 };
 
 
-export default Results;
+export default Home;
