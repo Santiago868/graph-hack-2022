@@ -24,19 +24,21 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 const config: HardhatUserConfig = {
   solidity: "0.8.4",
+  defaultNetwork: "matic_testnet",
   networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // ropsten: {
+    //   url: process.env.ROPSTEN_URL || "",
+    //   accounts:
+    //     process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    // },
+    hardhat: {},
+    matic_testnet: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: [
+        `91b957b897e3c2d5fda31ca35069bed214a29f11a499c5778c98e42852f19aeb`,
+      ],
+      gasPrice: 8000000000,
     },
-  },
-  gasReporter: {
-    enabled: process.env.REPORT_GAS !== undefined,
-    currency: "USD",
-  },
-  etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
 
