@@ -1,5 +1,4 @@
 import * as React from "react"
-import {Landing} from './Landing'
 import {
   ChakraProvider,
   Box,
@@ -11,14 +10,29 @@ import {
   theme,
   Button
 } from "@chakra-ui/react"
+
+
 import { ColorModeSwitcher } from "./ColorModeSwitcher"
 import { Logo } from "./Logo"
 import { FaRegMap } from "react-icons/fa"
 
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Results from "./pages/Results"
+import Layout from "./Layouts"
+import Home from "./pages/Home";
+
+
+
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Landing/>
-    </Box>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+          <Route path="results" element={<Results />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </ChakraProvider>
 )
