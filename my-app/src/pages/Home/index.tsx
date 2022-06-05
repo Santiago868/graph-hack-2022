@@ -46,6 +46,14 @@ function Home() {
     // Call the Upload API
     uploadImage(formData);
   };
+  
+  const handleClick = () => {
+
+      setTimeout(() => {
+          window.location.href = "https://mumbai.polygonscan.com/address/0x177F8A18cEf0cdDdaa7F5BB28a0FBcB38FA4699c"
+      }, 5000);
+  }
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -87,60 +95,7 @@ function Home() {
         </Box>
       </Container>
       <CssBaseline />
-      <Container maxWidth={false} className='background'>
-        <Box
-          display='flex'
-          flexDirection='column'
-          sx={{
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh',
-          }}
-        >
-            <Typography
-                  className="text"
-                  textAlign='left'
-                  variant='h4'
-                  component='h1'
-                  gutterBottom
-                  fontFamily='Poppins'
-                >
-                  Faster Better Smaller
-            </Typography>
-            <Typography
-                  className="holder2"
-                  textAlign='left'
-                  fontFamily='Poppins'
-                  sx={{
-                    marginBottom: '60px'
-                  }}
-                >
-                   Distill your NFT collection images to their core with DSTL. Hyper-compress your images to 10% of the PNG size for faster and cheaper storage and more responsive UI for all things NFTs.
-            </Typography>
-          <Box display='flex' flexDirection='column' sx={{ width: '30%' }}>
-            {/* Single Image Upload */}
-            <FormProvider {...methods}>
-              <Box
-                component='form'
-                noValidate
-                autoComplete='off'
-                onSubmit={methods.handleSubmit(onSubmitHandler)}
-              >
-
-                <FileUpload limit={3} multiple name='images' />
-                <Button
-                  variant='contained'
-                  type='submit'
-                  fullWidth
-                  sx={{ py: '0.8rem', my: 2 }}
-                >
-                  Submit Images
-                </Button>
-              </Box>
-            </FormProvider>
-          </Box>
-        </Box>
-      </Container>
+     
       <Container maxWidth={false} className='background' style={{paddingTop: '50px', paddingBottom: '50px'}}>
         <Box
           display='flex'
@@ -209,9 +164,29 @@ function Home() {
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: '50vh',
+            height: '100vh',
           }}
         >
+            <Typography
+                  className="text"
+                  textAlign='left'
+                  variant='h4'
+                  component='h1'
+                  gutterBottom
+                  fontFamily='Poppins'
+                >
+                  Faster Better Smaller
+            </Typography>
+            <Typography
+                  className="holder2"
+                  textAlign='left'
+                  fontFamily='Poppins'
+                  sx={{
+                    marginBottom: '60px'
+                  }}
+                >
+                   Distill your NFT collection images to their core with DSTL. Hyper-compress your images to 10% of the PNG size for faster and cheaper storage and more responsive UI for all things NFTs.
+            </Typography>
           <Box display='flex' flexDirection='column' sx={{ width: '30%' }}>
             {/* Single Image Upload */}
             <FormProvider {...methods}>
@@ -221,14 +196,16 @@ function Home() {
                 autoComplete='off'
                 onSubmit={methods.handleSubmit(onSubmitHandler)}
               >
+
+                <FileUpload limit={3} multiple name='images' />
                 <Button
+                  type="submit"
+                  onClick={handleClick}
                   variant='contained'
-                  type='submit'
                   fullWidth
                   sx={{ py: '0.8rem', my: 2 }}
-                  href="https://mumbai.polygonscan.com/address/0x177F8A18cEf0cdDdaa7F5BB28a0FBcB38FA4699c"
                 >
-                  MINT NOW
+                  Submit Images
                 </Button>
               </Box>
             </FormProvider>
