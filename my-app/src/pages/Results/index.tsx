@@ -9,6 +9,7 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
+import { useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 const theme = extendTheme({
@@ -20,6 +21,9 @@ const theme = extendTheme({
   })
 
 const Results = () => {
+    const staticPage = useRef<any>();
+    const loadingPage = useRef<any>();
+
     ChartJS.register(
         CategoryScale,
         LinearScale,
@@ -43,7 +47,7 @@ const Results = () => {
     };
 
     const labels = ['PNG', 'JPEG', 'SVG']
-    
+
     const data = {
         labels,
         datasets: [
@@ -64,12 +68,22 @@ const Results = () => {
         ]
     }
 
+    const handleClick = () => {
+        if (staticPage.current) 
+        {
+            staticPage.current.style.display = "none" 
+            loadingPage.current.style.display = "block"
+            
+        }
+       
+    }
     return (
         <ChakraProvider theme={theme}>
 
         <>
                 <Container
                     display="block"
+                    ref={staticPage}
                 >
                 <Center>
                     <Heading>
@@ -90,9 +104,10 @@ const Results = () => {
 
                 <Container>
                     <Button 
-                            color='white'
-                            backgroundColor='purple.100'
-                            colorScheme='primary'
+                        color='white'
+                        backgroundColor='purple.100'
+                        colorScheme='primary'
+                        onClick={handleClick}
                     >
                         Mint Now
                     </Button>
@@ -101,6 +116,7 @@ const Results = () => {
             
             <Container
                     display='none'
+                    ref={loadingPage}
                 >
                 <Center>
                     <Spinner
