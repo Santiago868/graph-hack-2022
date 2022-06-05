@@ -1,4 +1,5 @@
-import { Center, Heading, Container } from '@chakra-ui/react'
+import { Center, Heading, Container, Button, Spinner, ChakraProvider } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -10,6 +11,13 @@ import {
   } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
+const theme = extendTheme({
+    colors: {
+      purple: {
+        100: "#7b3fe4",
+      },
+    },
+  })
 
 const Results = () => {
     ChartJS.register(
@@ -35,6 +43,7 @@ const Results = () => {
     };
 
     const labels = ['PNG', 'JPEG', 'SVG']
+    
     const data = {
         labels,
         datasets: [
@@ -56,23 +65,58 @@ const Results = () => {
     }
 
     return (
+        <ChakraProvider theme={theme}>
+
         <>
-            <Center>
-                <Heading>
-                    INSERT TAGLINE
-                </Heading>
-            </Center>
-        
+                <Container
+                    display="block"
+                >
+                <Center>
+                    <Heading>
+                        INSERT TAGLINE
+                    </Heading>
+                </Center>
+            
+                
+                <Container
+                    maxW='container.md' 
+                >
+                    <Bar
+                        options={options}
+                        data={data}
+                    />
+                </Container>
+
+
+                <Container>
+                    <Button 
+                            color='white'
+                            backgroundColor='purple.100'
+                            colorScheme='primary'
+                    >
+                        Mint Now
+                    </Button>
+                </Container>
+            </Container>
             
             <Container
-                maxW='container.md' 
-            >
-                <Bar
-                    options={options}
-                    data={data}
-                />
+                    display='none'
+                >
+                <Center>
+                    <Spinner
+                        thickness='4px'
+                        speed='0.65s'
+                        emptyColor='gray.200'
+                        color='purple.100'
+                        size='xl'
+                    />
+                </Center>
+
             </Container>
         </>
+
+        </ChakraProvider>
+
     )
 };
 
