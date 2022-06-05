@@ -105,7 +105,7 @@ function Home() {
                   gutterBottom
                   fontFamily='Poppins'
                 >
-                  Faster Better S<span className="text">a</span>
+                  Faster Better Smaller
             </Typography>
             <Typography
                   className="holder2"
@@ -115,7 +115,7 @@ function Home() {
                     marginBottom: '60px'
                   }}
                 >
-                  Because bigger is not always better
+                   Distill your NFT collection images to their core with DSTL. Hyper-compress your images to 10% of the PNG size for faster and cheaper storage and more responsive UI for all things NFTs.
             </Typography>
           <Box display='flex' flexDirection='column' sx={{ width: '30%' }}>
             {/* Single Image Upload */}
@@ -158,7 +158,7 @@ function Home() {
         </Box>
           
       </Container>
-      <Container maxWidth={false} className='background' style={{paddingTop: '50px', paddingBottom: '50px'}}>
+      <Container maxWidth={false} className='background' style={{paddingTop: '10px', paddingBottom: '50px'}}>
       <Typography
                   className="text"
                   textAlign='center'
@@ -175,7 +175,7 @@ function Home() {
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: '100vh',
+            height: '70vh',
           }}
         >
               <img
@@ -185,14 +185,14 @@ function Home() {
         </Box>
           
       </Container>
-      <Container maxWidth={false} className='background' style={{paddingTop: '10px', paddingBottom: '20px'}}>
+      <Container maxWidth={false} className='background' style={{paddingTop: '0px', paddingBottom: '20px'}}>
         <Box
           display='flex'
           flexDirection='column'
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: '100vh',
+            height: '60vh',
           }}
         >
               <img
