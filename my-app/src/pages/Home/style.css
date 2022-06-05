@@ -47,9 +47,6 @@
 .textLarge{
     color: white;
     font-family: 'Poppins';
-    font-weight: 500;
-    letter-spacing: 4px;
-    font-size: 100px;
     
   }
 
@@ -66,3 +63,8 @@
     width: 800px;
     font-weight: 300;
 }
+.reg{
+    color: white;
+    font-family: 'Poppins';
+    font-size: 52px;
+  }

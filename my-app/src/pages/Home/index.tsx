@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  CircularProgress,
   Container,
   CssBaseline,
   Stack,
@@ -16,6 +17,16 @@ import { useUploadImageMutation } from '../../redux/uploadAPI';
 import './style.css'
 import diagram from '../../../src/assets/diagram.png';
 import histogram from '../../../src/assets/histogram.png';
+import monk24 from '../../../src/assets/monk-24.png';
+import monk202 from '../../../src/assets/monk-202.png';
+import monk250 from '../../../src/assets/monk-250.png';
+import monk24comp from '../../../src/assets/monk-24comp.png';
+import monk202comp from '../../../src/assets/monk-202comp.png';
+import monk250comp from '../../../src/assets/monk-250comp.png';
+import beaker from '../../../src/assets/beaker.png';
+
+import code from '../../../src/assets/code.png';
+import { useState } from 'react'
 
 import auto from '../../../src/assets/auto.png';
 
@@ -46,14 +57,15 @@ function Home() {
     // Call the Upload API
     uploadImage(formData);
   };
-  
+  const [submitClick, setSubmitClick] = useState(false)
   const handleClick = () => {
 
       setTimeout(() => {
-          window.location.href = "https://mumbai.polygonscan.com/address/0x177F8A18cEf0cdDdaa7F5BB28a0FBcB38FA4699c"
-      }, 5000);
+          window.location.href = "https://mumbai.polygonscan.com/token/0x5852e2b1a614e2fa3140a59f9ab35e0c20a34cc5"
+      }, 20000);
+      setSubmitClick(true)
   }
-  
+  console.log({submitClick})
 
   return (
     <ThemeProvider theme={theme}>
@@ -67,21 +79,22 @@ function Home() {
             height: '100vh',
           }}
         >
-          <Box display='flex' flexDirection='column' sx={{ width: '50%' }}>
+          <Box display='flex' flexDirection='column' sx={{ width: '100%' }}>
             {/* Single Image Upload */}
             <Typography
                   className="textLarge"
                   textAlign='center'
-                  variant='h1'
-                  component='h1'
                   gutterBottom
+                  fontSize='150px'   
+                  fontWeight='500'
+                  letterSpacing='4px'
                   fontFamily='Poppins'
                   sx={{
                     fontWeight: 500
                   }}
                 >
                   DSTL
-                </Typography>
+            </Typography>
             <FormProvider {...methods}>
               <Box
                 component='form'
@@ -104,16 +117,18 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             height: '100vh',
+            paddingTop:'100px',
           }}
         >
               <img
                 src={diagram}
-                alt='file upload' 
+                alt='file upload'
+                width='1300px'
               /> 
         </Box>
           
       </Container>
-      <Container maxWidth={false} className='background' style={{paddingTop: '10px', paddingBottom: '50px'}}>
+      <Container maxWidth={false} className='background'>
       <Typography
                   className="text"
                   textAlign='center'
@@ -125,12 +140,12 @@ function Home() {
                   Image Compression Results
             </Typography>
             <Typography
-                  className="text"
+                  className="reg"
                   textAlign='center'
-                  variant='h5'
-                  component='h1'
                   gutterBottom
                   marginTop='20px'
+                  fontSize='20px'
+                  paddingBottom='100px'
 
                 >
                   Hella Compressed Pictures of Animals and Stuffs
@@ -142,16 +157,40 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             height: '70vh',
+            paddingTop: '50px'
           }}
         >
               <img
                 src={histogram}
                 alt='file upload' 
+                width='1300px'
               /> 
         </Box>
           
       </Container>
-      <Container maxWidth={false} className='background' style={{paddingTop: '0px', paddingBottom: '20px'}}>
+      <Container maxWidth={false} className='background' style={{paddingTop: '100px', paddingBottom: '50px'}}>
+      <Typography
+                  className="text"
+                  textAlign='center'
+                  variant='h2'
+                  component='h1'
+                  gutterBottom
+                  fontFamily='Poppins'
+                  marginTop='200px'
+                >
+                  Deep auto encoder image compressor
+            </Typography>
+            {/* <Typography
+                  className="text"
+                  textAlign='center'
+                  variant='h5'
+                  component='h1'
+                  gutterBottom
+                  marginTop='20px'
+
+                >
+                  Hella Compressed Pictures of Animals and Stuffs
+            </Typography> */}
         <Box
           display='flex'
           flexDirection='column'
@@ -159,39 +198,130 @@ function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             height: '60vh',
+            paddingTop: '400px'
           }}
         >
               <img
                 src={auto}
                 alt='file upload' 
+                width='1500px'
               /> 
         </Box>
           
       </Container>
-      <Container maxWidth={false} className='background'>
+      <Container maxWidth={false} className='background' style={{paddingTop: '300px'}}>
+        <Box
+          display='flex'
+          flexDirection='row'
+          sx={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '40vh',
+            paddingTop: '100px'
+          }}
+        >
+              <Box sx={{width: '20%'}}>
+              <img
+                src={monk24}
+                alt='file upload' 
+              /> 
+              </Box>
+              <Box sx={{width: '20%'}}>
+                <img
+                src={monk202}
+                alt='file upload' 
+              />
+              </Box>
+              <Box sx={{width: '20%'}}>
+                <img
+                src={monk250}
+                alt='file upload' 
+                width='1300px'
+              />  
+
+              </Box>
+        </Box>
+          
+      </Container>
+      <Container maxWidth={false} className='background' style={{paddingTop: '30px', paddingBottom: '10px'}}>
+        <Box
+          display='flex'
+          flexDirection='row'
+          sx={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '30vh',
+            paddingTop: '5px'
+          }}
+        >
+              <Box sx={{width: '20%'}}>
+              <img
+                src={monk24comp}
+                alt='file upload' 
+              /> 
+              </Box>
+              <Box sx={{width: '20%'}}>
+                <img
+                src={monk202comp}
+                alt='file upload' 
+              />
+              </Box>
+              <Box sx={{width: '20%'}}>
+                <img
+                src={monk250comp}
+                alt='file upload' 
+                width='1300px'
+              />  
+
+              </Box>
+        </Box>
+          
+      </Container>
+      <Container maxWidth={false} className='background'style={{paddingTop: '20px', paddingBottom: '50px'}} >
+      <Box
+          display='flex'
+          flexDirection='column'
+          sx={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '70vh',
+            paddingTop: '400px'
+          }}
+        >
+              <img
+                src={code}
+                alt='file upload' 
+                width='1500px'
+              /> 
+        </Box>
         <Box
           display='flex'
           flexDirection='column'
           sx={{
             justifyContent: 'center',
             alignItems: 'center',
-            height: '100vh',
+            height: '120vh',
+            paddingTop: '800px',
+            paddingBottom: '300px',
+            width: '100%',
           }}
         >
             <Typography
                   className="text"
                   textAlign='left'
-                  variant='h4'
+                  variant='h1'
                   component='h1'
                   gutterBottom
                   fontFamily='Poppins'
                 >
-                  Faster Better Smaller
+                  Faster. Better. Smaller.
             </Typography>
             <Typography
                   className="holder2"
                   textAlign='left'
                   fontFamily='Poppins'
+                  variant='h5'
+                  gutterBottom
                   sx={{
                     marginBottom: '60px'
                   }}
@@ -208,7 +338,7 @@ function Home() {
                 onSubmit={methods.handleSubmit(onSubmitHandler)}
               >
 
-                <FileUpload limit={3} multiple name='images' />
+                <FileUpload limit={10} multiple name='images' />
                 <Button
                   type="submit"
                   onClick={handleClick}
@@ -216,7 +346,7 @@ function Home() {
                   fullWidth
                   sx={{ py: '0.8rem', my: 2 }}
                 >
-                  Submit Images
+                  {submitClick ? <CircularProgress color="success" /> : 'submit'}
                 </Button>
               </Box>
             </FormProvider>
