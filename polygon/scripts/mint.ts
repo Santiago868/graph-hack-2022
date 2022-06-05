@@ -8,9 +8,11 @@ async function main(_URI: any) {
   const NFT = await hre.ethers.getContractFactory("MyToken");
 
   const contract = NFT.attach(CONTRACT_ADDRESS);
-  await contract._safeMint(WALLET_ADDRESS).then((txn: { hash: any }) => {
+  await contract.safeMint(WALLET_ADDRESS).then((txn: { hash: any }) => {
     // Log Txn
     console.log(txn.hash);
     return txn;
   });
 }
+
+export default main(null);

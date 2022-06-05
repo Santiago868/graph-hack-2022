@@ -33,7 +33,7 @@ const config: HardhatUserConfig = {
     // },
     hardhat: {},
     matic_testnet: {
-      url: "https://rpc-mumbai.maticvigil.com",
+      url: "https://matic-testnet-archive-rpc.bwarelabs.com",
       accounts: [
         `91b957b897e3c2d5fda31ca35069bed214a29f11a499c5778c98e42852f19aeb`,
       ],
