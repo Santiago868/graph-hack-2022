@@ -1,5 +1,15 @@
 # DSTL
 
+## Team
+* [@wariroja](https://github.com/wariroja)
+* [@Santiago868](https://github.com/Santiago868)
+* [@jeffscott](https://github.com/jeffscott)
+
+## DEMO
+Check out our presentation from GraphHack 2022
+
+**https://graph-hack-2022.vercel.app/**
+
 # Problem
 
 Tired of waiting for images to load on brokensea as you scroll through collections? I was, that's when I thought about how NFT collections have very constrained image characteristics that a neural network can easily learn and memorize.
@@ -23,3 +33,4 @@ Building infrastructure/API for training models and using the decoders Integrate
 * solidity
 * typescript
 * ipfs
+* NN autoencoder code ~~borrowed~~ stolen from https://github.com/abskj/lossy-image-compression, thanks **abskj**!
