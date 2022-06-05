@@ -4,7 +4,6 @@ import {
   CircularProgress,
   Container,
   CssBaseline,
-  Stack,
   Typography,
 } from '@mui/material';
 import { ThemeProvider } from '@mui/material/styles';
@@ -15,15 +14,14 @@ import FileUpload from '../FileUpload';
 import theme from '../../theme';
 import { useUploadImageMutation } from '../../redux/uploadAPI';
 import './style.css'
-import diagram from '../../../src/assets/diagram.png';
-import histogram from '../../../src/assets/histogram.png';
-import monk24 from '../../../src/assets/monk-24.png';
-import monk202 from '../../../src/assets/monk-202.png';
-import monk250 from '../../../src/assets/monk-250.png';
-import monk24comp from '../../../src/assets/monk-24comp.png';
-import monk202comp from '../../../src/assets/monk-202comp.png';
-import monk250comp from '../../../src/assets/monk-250comp.png';
-import beaker from '../../../src/assets/beaker.png';
+import diagram from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/diagram.png';
+import histogram from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/histogram.png';
+import monk24 from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-24.png';
+import monk202 from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-202.png';
+import monk250 from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-250.png';
+import monk24comp from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-24comp.png';
+import monk202comp from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-202comp.png';
+import monk250comp from 'https://graph-hack-2022.s3.us-west-2.amazonaws.com/monk-250comp.png';
 
 import code from '../../../src/assets/code.png';
 import { useState } from 'react'
