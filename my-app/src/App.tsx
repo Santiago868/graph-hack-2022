@@ -12,8 +12,6 @@ import {
 } from "@chakra-ui/react"
 
 
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
 import { FaRegMap } from "react-icons/fa"
 
 
