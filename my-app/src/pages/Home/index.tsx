@@ -318,7 +318,7 @@ function Home() {
             </Typography>
             <Typography
                   className="holder2"
-                  textAlign='left'
+                  textAlign='center'
                   fontFamily='Poppins'
                   variant='h5'
                   gutterBottom
