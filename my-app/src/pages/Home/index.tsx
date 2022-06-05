@@ -124,6 +124,17 @@ function Home() {
                 >
                   Image Compression Results
             </Typography>
+            <Typography
+                  className="text"
+                  textAlign='center'
+                  variant='h5'
+                  component='h1'
+                  gutterBottom
+                  marginTop='20px'
+
+                >
+                  Hella Compressed Pictures of Animals and Stuffs
+            </Typography>
         <Box
           display='flex'
           flexDirection='column'
