@@ -1,13 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"); 
 
 .text{
     color: white;
-    font-family: 'Poppins'
+    font-family: 'Poppins';
+    font-size: 52px;
   }
+
+.textM{
+    color: white;
+    font-family: 'Poppins';
+    font-size: 50px;
+}
+/* .textA{
+    color: white;
+    font-family: 'Poppins;
+    font-size: 40px
+}
+.textLOne{
+    color: white;
+    font-family: 'Poppins;
+    font-size: 28px;
+}
+
+.textLTwo{
+    color: white;
+    font-family: 'Poppins;
+    font-size: 16px
+}
+.textE{
+    color: white;
+    font-family: 'Poppins;
+    font-size: 8px;
+}
+.textR{
+    color: white;
+    font-family: 'Poppins;
+    font-size: 8px
+} */
 .background {
     background-color: black;
 
 }
 .slider:hover {
     color: #2e8b57;
+}
+
+.textLarge{
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 100px;
+    
+  }
+
+.holder1 {
+    color: white;
+    font-family: 'Poppins';
+    font-size: '30px';
+}
+
+.holder2 {
+    color: white;
+    font-family: 'Poppins';
+    font-size: '30px';
 }
